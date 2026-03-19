@@ -4,7 +4,6 @@
 #  PLAYFLIX — Movie Page UI
 
 
-![PLAYFLIX Preview](img/1.png)
 
 A modern **Netflix-inspired movie page design** built using pure HTML and CSS.
 
