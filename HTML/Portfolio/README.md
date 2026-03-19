@@ -1,10 +1,6 @@
 #  Cihan Sarı – Personal Portfolio
 
 
-> A minimal, paper-inspired personal portfolio with a clean and professional aesthetic.
-
----
-
 ##  About The Project
 
 This project is designed as a personal portfolio with a **paper / notebook-inspired aesthetic**,  
