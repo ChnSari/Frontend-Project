@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google! BETA</title>
+
+    <style>
+
+        :root{
+            --bg:#e6e6e6;
+            --br:#eee;
+            --rg:#999;
+            --pnl:#0033cc;
+            --hov:#69b3a2;
+        }
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--bg);
+            text-align: center;
+        }
+
+        .logo{
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 40px;
+        }
+
+        /* Google Efect */
+        .logo span{
+            font-size: 80px;
+            font-weight: bold;
+            display: inline-block;
+
+           text-shadow: 
+            1px 1px 0 #bbb,
+            2px 2px 0 #aaa,
+            3px 3px 0 #999,
+            4px 4px 0 #888,
+            5px 5px 0 #777,
+            6px 6px 10px rgba(0,0,0,0.4);
+        }
+
+        /* Google Renkleri */
+        .g{ color:#4285F4; }
+        .o1{ color:#EA4335; }
+        .o2{ color:#FBBC05; }
+        .g2{ color:#4285F4; }
+        .l{ color:#34A853; }
+        .e{ color:#EA4335; }
+
+        /* Google Beta */
+        .search-area{
+            margin-top: 20px;
+        }
+
+        .search-area input{
+            width: 320px;
+            padding: 4px;
+            border: 1px solid var(--rg);
+        }
+
+        .buttons{
+            margin-top: 5px;
+        }
+
+        .buttons button{
+            padding: 4px 12px;
+            border: 1px solid var(--rg);
+            background: var(--br);
+            cursor: pointer;
+        }
+
+        /* Panel */
+        .panel{
+            width: 80%;
+            margin: 30px auto;
+            background: var(--hov);
+            display: flex;
+            color: var(--bg);
+        }
+        
+        .panel div{
+            flex: 1;
+            padding: 15px;
+            border-right: 2px solid var(--bg);
+        }
+
+        .panel div:last-child{
+            border-right: none;
+        }
+
+        .panel a{
+            color: var(--pnl);
+            text-decoration: underline;
+            display: block;
+        }
+
+        .email{
+            margin-top: 5px;
+        }
+
+        /* Footer */
+        .footer{
+            margin-top: 20px;
+            font-size: 15px;
+        }
+        
+
+    </style>
+</head>
+<body>
+
+    <!-- Logo -->
+     <div class="logo">
+        <span class="g">G</span>
+        <span class="o">O</span>
+        <span class="o">O</span>
+        <span class="g">G</span>
+        <span class="l">L</span>
+        <span class="e">E</span>
+    </div>
+    <span class="beta">BETA</span>
+
+
+     <!-- Search -->
+      <div class="search-area">
+        <p>Search the web using Google!</p>
+
+        <input type="text">
+
+        <div class="buttons">
+            <button>Google Search</button>
+            <button>I'm feeling lucky</button>
+        </div>
+      </div>
+
+      <!-- Panel -->
+       <div class="panel">
+
+        <div>
+            <b>Special Searches</b><br>
+            <a href="#">Stanford Search</a>
+            <a href="#">Linux Search</a>
+        </div>
+
+        <div>
+            <a href="#">Help!</a>
+            <a href="#">About Google!</a>
+            <a href="#">Company Info</a>
+            <a href="#">Google! Logos</a>
+        </div>
+        
+        <div>
+            <b>Get Google!</b><br>
+            updates monthly:<br>
+            <input class="email" placeholder="your e-mail">
+            <button>Subscribe</button>
+            <a href="#">Archive</a>
+        </div>
+       </div>
+
+       <!-- Footer -->
+        <div class="footer">Copyright ©1998 Google Inc.</div>
+    
+</body>
+</html>

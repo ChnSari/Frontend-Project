@@ -1,0 +1,167 @@
+:root{
+
+    --bg:#0f172a;
+    --panel:#1e293b;
+    --primary:#3b82f6;
+    --success:#22c55e;
+    --danger:#ef4444;
+    --text:#f1f5f9;
+    --muted:#94a3b8;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg,#0f172a,#1e293b);
+    color: var(--text);
+    height: 100vh;
+}
+
+.app{
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar */
+.sidebar{
+    width: 250px;
+    background: #020617;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.brand{
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.brand span{
+    color: var(--primary);
+}
+
+.nav button{
+    background: none;
+    border: none;
+    color: var(--muted);
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav button.active,
+.nav button:hover{
+    background: var(--panel);
+    color: white;
+}
+
+.badge{
+    background: var(--primary);
+    padding: 3px 8px;
+    border-radius: 8px;
+    font-size: 11px;
+}
+
+/* Main */
+.main{
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.top{
+    display: flex;
+    justify-content: space-between;
+}
+
+.top input{
+    background: var(--panel);
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+}
+
+.top h1{
+    color: var(--text);
+}
+
+/* Add Task */
+.add-task{
+    display: flex;
+    gap: 10px;
+    background: var(--panel);
+    padding: 18px;
+    border-radius: 12px;
+}
+
+.add-task input{
+    flex: 1;
+    background: none;
+    border: none;
+    color: white;
+}
+
+.add-task button{
+    border: none;
+    padding: 10px 18px;
+    border-radius: 10px;
+    background: var(--primary);
+    color: white;
+    cursor: pointer;
+}
+
+/* Tasks */
+.tasks{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+    gap: 15px;
+}
+
+.task{
+    background: var(--panel);
+    padding: 15px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.task.done{
+    opacity: 0.5;
+    text-decoration: line-through;
+}
+
+.actions{
+    display: flex;
+    gap: 8px;
+}
+
+.actions button{
+    flex: 1;
+    border: none;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.complete{
+    background: var(--success);
+}
+
+.delete{
+    background: var(--danger);
+    color: white;
+}
+

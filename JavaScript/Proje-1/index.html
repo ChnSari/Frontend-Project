@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kodluyoruz Javascript Saat Ödevi</title>
+  
+  <!-- Bootstrap -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+
+  <style>
+    :root{
+      --bg:#e98208;
+      --rg:#f2c94c;
+      --blck:#111;
+      --wht:white;
+    }
+
+    /* page hidden at the start */
+    #mainContent{
+      display: none;
+    }
+
+    /* entrance panel */
+    #loginBar{
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: var(--blck);
+      padding: 20px;
+      text-align: center;
+      z-index: 9999;
+      border-bottom: 3px solid var(--rg);
+    }
+
+    #loginBar input{
+      padding: 8px;
+      border-radius: 5px;
+      border: none;
+      text-align: center;
+    }
+
+    #loginMessage{
+      color: var(--wht);
+      margin-top: 5px;
+    }
+
+
+    .clock{
+      position: relative;
+      text-align: center;
+      color: var(--bg);
+      font-size: 60px;
+      font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    .text1{
+      position: relative;
+      text-align: center;
+      color: var(--bg);
+      font-size: 50px;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    .text2{
+      position: relative;
+      text-align: center;
+      color: var(--bg);
+      font-size: 40px;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      margin-right: 100px;
+      margin-left: 100px
+    }
+
+    img{
+      margin-top: 120px;
+      width: 17%;
+    }
+
+    /* Time */
+    .hourglass{
+      position: relative;
+      width:100px;
+      height:200px;
+      margin:auto;
+      border-left:4px solid white;
+      border-right:4px solid white;
+      border-radius:20px;
+      overflow:hidden;
+      background: rgba(255,255,255,0.05);
+    }
+
+    .sand{
+      position: absolute;
+      left: 0;
+      width: 100%;
+      background: var(--rg);
+      transition: height 1s linear;
+    }
+
+    .sand.top{
+      top:0;
+      height: 50%;
+      border-bottom-left-radius:50%;
+      border-bottom-right-radius:50%;
+    }
+
+    .sand.bottom{
+      bottom: 0;
+      height: 0%;
+      border-top-left-radius:50%;
+      border-top-right-radius:50%;
+    }
+
+    .divider{
+      position:absolute;
+      top: 50%;
+      left: 50%;
+      width: 4px;
+      height: 4px;
+      background: white;
+      transform: translate(-50%,-50%);
+      border-radius:50%;
+    }
+
+    #time{
+      font-size: 40px;
+      margin-top: 20px;
+      letter-spacing: 2px;
+      color: var(--bg);
+    }
+
+  </style>
+</head>
+<body class="bg-dark">
+  <!-- Login Panel -->
+   <div id="loginBar">
+      <strong style="color: var(--rg);">Güvenlik Girişi</strong>
+        <input type="password" id="password" placeholder="Parlola Giriniz">
+        <button class="btn btn-warning btn-sm" onclick="checkPassword()">Giriş</button>
+      <div id="loginMessage"></div>
+    </div>
+    
+  <!-- Homepage -->
+    <div id="mainContent">
+      <div class="text-center">
+        <img src="https://cdn.sanity.io/images/9kdepi1d/production/65c832d202a503b15d99e628f4313782f3ef50db-300x62.png" alt="" class="rounded">
+         <div class="text1 text-center">Merhabalar,<strong><span id="myName"></span></strong>! Hoş geldiniz!</div>
+            <div class="clock" id="myClock" onload="showTime()"></div>
+              <div class="text2 text-center"><strong>Frontend Javascript </strong>'nın Javascript bölümü 1. görevi</div>
+              <div class="hourglass mt-3">
+                  <div class="sand top"></div>
+                  <div class="divider"></div>
+                  <div class="sand bottom"></div>
+              </div>
+          <div id="time"></div>
+      </div>
+    </div>
+
+  <!-- Sj-->
+  <script>
+    /* password system */
+    let correctPassword = "cihan"
+    let attempts = 3
+
+    function checkPassword(){
+      let pass = document.getElementById("password").value
+      if(pass === correctPassword){
+        document.getElementById("mainContent").style.display = "block"
+        document.getElementById("loginBar").style.display = "none"
+      }
+      else{
+        attempts --
+
+        if(attempts>0){
+          document.getElementById("loginMessage").innerText = "Yanlış Parola! Kalan hak: "+attempts
+        }
+        else{
+          document.getElementById("loginMessage").innerText = "Erişim Engellendi!"
+          document.getElementById("password").disabled=true
+        }
+      }
+    }
+
+    // Random duration: 30 to 120 seconds
+    let totalSeconds = Math.floor(Math.random() * (120- 30 + 1)) + 30;
+    let startingSeconds = totalSeconds;
+
+    let countdown = setInterval(function(){
+      if(totalSeconds <= 0){
+        clearInterval(countdown)
+        document.getElementById("time").innerText = "Süre Bitti"
+        return
+      }
+
+      totalSeconds --
+
+      let minutes = Math.floor(totalSeconds/60)
+      let seconds = totalSeconds % 60
+
+      document.getElementById("time").innerText = 
+      String(minutes).padStart(2, '0') + ":" + String(seconds).padStart(2,'0')
+
+      let percent = totalSeconds / startingSeconds
+
+      document.querySelector(".sand.top").style.height = 
+      (50 * percent) + "%"
+
+      document.querySelector(".sand.bottom").style.height =
+      (50 * (1 - percent)) + "%"
+    }
+      ,1000
+    )
+
+    
+  </script>
+
+</body>
+</html>

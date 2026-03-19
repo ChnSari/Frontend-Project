@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cihan Sarı | Portfolio</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+
+        :root{
+            --bg:#f4e9dc;
+            --hdr:#fffaf3;
+            --rg:#3a2f28;
+            --ab:#7a6d64;
+            --rv:#c9a66b;
+            --gh:#4a3f37;
+        }
+        
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            background:var(--bg);
+            font-family: 'Inter',sans-serif;
+            color: var(--rg);
+            line-height: 1.8;
+        }
+
+        .wrapper{
+            max-width: 900px;
+            margin: 60px auto;
+            background: var(--hdr);
+            padding: 80px;
+            box-shadow:0 15px 40px rgba(0,0,0,0.08);
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .wrapper::before{
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image:radial-gradient(rgba(0,0,0,0.015) 1px, transparent 1px);
+            background-size: 4px 4px;
+            pointer-events: none;
+            border-radius: 8px;
+        }
+        
+        .header{
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .header h1{
+            font-family:'Playfair Display',serif;
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .header p{
+            font-size: 15px;
+            color:var(--ab)
+        }
+
+        .section{
+            margin-bottom: 80px;
+        }
+
+        .section h2{
+            font-family:'Playfair Display',serif;
+            font-size: 28px;
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .section h2::after{
+            content: "";
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            background:var(--rv)
+        }
+
+        /* Hakkımızda */
+        .about-text{
+            max-width: 650px;
+            font-size: 16px;
+            color: var(--gh);
+        }
+
+        /* Seviye - Yetenekler */
+        .skill{
+            margin-bottom: 20px;
+        }
+
+        .skill-title{
+            font-weight: 500;
+            margin-bottom: 6px;
+        }
+
+        .level{
+            font-size: 14px;
+            color: var(--rv);
+        }
+
+
+        /* Projeler */
+        .project{
+            margin-bottom: 25px;
+            padding-left: 15px;
+            border-left:3px solid var(--rv) ;
+        }
+
+        .project h3{
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .project p{
+            font-size: 14px;
+            color: var(--gh);
+        }
+
+        /* Footer */
+        .footer{
+            text-align: center;
+            font-size: 13px;
+            color: var(--ab);
+            margin-top: 60px;
+        }
+
+    </style>
+
+</head>
+<body>
+ 
+    <!-- Hero-->
+    <div class="wrapper">
+        <div class="header">
+            <h1>Cihan Sarı</h1>
+            <p>Frontend Developer & Grafik Tasarım</p>
+        </div>
+
+        <!-- About-->
+        <div class="section">
+            <h2>Hakkımda</h2>
+            <p class="about-text">
+                Frontend geliştirici olarak modern web teknolojileri kullanarak performanslı ve kullanıcı odaklı arayüzler geliştiriyorum.
+                Responsive tasarım prensiplerine uygun, sürdürülebilir ve estetik çözümler üretmeye odaklanıyorum.
+                Animasyon sistemleri ve UI/UX optimizasyonu alanlarında deneyim sahibiyim.
+            </p>
+        </div>
+
+        <!-- Level-->
+        <div class="section">
+            <h2>Yetenekler</h2>
+
+            <div class="skill">
+                <div class="skill-title"> HTML / CSS </div>
+                <div class="level">İleri Seviye</div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-title"> JavaScript </div>
+                <div class="level">İleri Seviye</div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-title"> Bootstrap </div>
+                <div class="level">İleri Seviye</div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-title"> PHP </div>
+                <div class="level">İleri Seviye</div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-title"> MySQL </div>
+                <div class="level">Orta Seviye</div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-title"> Git </div>
+                <div class="level">İleri Seviye</div>
+            </div>
+        </div>
+
+        <!-- project -->
+        <div class="section">
+            <h2>Projeler</h2>
+
+            <div class="project">
+                <h3>Admin Dashboard</h3>
+                <p>Responsive ve performans odaklı yönetim paneli tasarımı.</p>
+            </div>
+
+            <div class="project">
+                <h3>Portfolio - Kurumsal Sayfalar </h3>
+                <p>Minimal ve deneyim odaklı tasarım yaklaşımıyla hazırlanmış web siteleri.</p>
+            </div>
+
+            <div class="project">
+                <h3>Grafik Tasarım Çalışmaları</h3>
+                <p>Kurumsal kimlik, sosyal medya görselleri ve dijital kampanya tasarımları.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>İletişim</h2>
+            <p>Email: cihannsri@gmail.com</p>
+            <p>LinkedIn: linkedin.com/in/cihansri</p>
+            <p>GitHub: github.com/ChnSari</p>
+            <p>Instagram: instagram.com/sarigrid</p>
+        </div>
+        
+        <!-- Footer-->
+        <div class="footer">
+            © 2026 Cihan Sarı
+        </div>
+    </div>
+
+</body>
+</html>

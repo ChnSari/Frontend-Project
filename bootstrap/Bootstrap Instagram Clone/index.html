@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram clone </title>
+
+    <!-- Bootstrap -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+
+    <!-- Fonts -->
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
+     
+    <!-- CSS -->
+     <link rel="stylesheet" href="assets/css/style.css">
+
+
+    <style>
+
+        :root{
+            --gray:gray;
+            --width:#FAFAFA;
+            --black:black;
+            --lightgrey:lightgrey;
+            --rgb:rgb(139, 133, 133);
+            --blue:#0095f6;
+            --red:rgb(238, 39, 82);
+
+        }
+        
+        ::placeholder{
+            text-align: center;
+            font-size: 14px;
+            color: var(--gray);
+            background-position: 40%;
+            background-size: 6%;
+        }
+
+        input.empty{
+            font-family: FontAwesome;
+            font-style: normal;
+            font-weight: normal;
+            text-decoration: inherit;
+            background-color: var(--width);
+        }
+
+       .postuserfont{
+            font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 15px;
+            color: var(--black);
+       }
+
+       .storyphoto{
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 2px solid var(--red);
+            margin-right: 7px;
+       }
+
+       .storytext{
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 12px;
+            color: var(--black);
+       }
+
+       .rightpanellinks{
+            text-decoration: none;
+            color: var(--lightgrey);
+       }
+
+       .storyphoto {
+            width: 56px;
+            height: 56px;
+            object-fit: cover;
+            border-radius: 50%;
+            padding: 1px;
+        }
+
+    </style>
+</head>
+<body>
+    
+<!-- Nav-->
+    <nav class="navbar navbar-expand-sm navbar-light border">
+        <div class="logo">
+            <a class="navbar-brand" href="#">
+                <img width="90px" height="40px" src="https://logos-world.net/wp-content/uploads/2020/04/Instagram-Logo-2010-2013.png">
+            </a>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon mr-5"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse">
+            <form class="form-inline my-2 my-lg-0 ml-5 d-none d-sm-block">
+                <input
+                class="form-control mr-sm-2 empty"
+                type="search"
+                placeholder="Ara"
+                style="font-family: Arial, FontAwesome; height: 28px; width: 216px"
+                aria-label="Search">
+            </form>
+        </div>
+
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-home fa-lg mr-2 d-none d-sm-block mt-1"></i>
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fab fa-facebook-messenger fa-lg mr-2 mt-1"
+                        style="color: var(--black)"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="far fa-compass fa-lg mr-2 mt-1"
+                        style="color: var(--black)"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="far fa-heart fa-lg mr-2 mt-1"
+                        style="color: var(--black)"></i>
+                    </a>
+                </li>
+                <!-- Resim Eklenecek -->
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.instagram.com/sarigrid"
+                    target="_blank">
+                    <img 
+                    src="assets/img/logo4.png"
+                    class="mb-2"
+                    style="width: 23px; height: 23px; border-radius: 50%;">
+                </a>
+            </ul>
+        </div>
+    </nav>
+<!-- Container -->
+    <div class="container middlearea">
+        <div class="row">
+            <div class="col-6">
+                <div class="card">
+                    <div class="card-body">
+                        <!-- Resim Eklenecek -->
+                        <a href="https://www.instagram.com/nasa" style="text-decoration: none;" target="_blank">
+                            <img src="https://th.bing.com/th/id/R.dfe000c4d39e10adeac73e968d0081c0?rik=2qecWrg5GwkLaA&riu=http%3a%2f%2fpluspng.com%2fimg-png%2fnasa-logo-png-nasa-logo-1664.png&ehk=d%2bgvuoNz%2b0udsBSxL%2bAGF0N%2f1tWoj4H6GaKOJhRCIyQ%3d&risl=&pid=ImgRaw&r=0"
+                                class="storyphoto img-fluid mr-3">
+                            <span class="storytext">Nasa</span>
+                        </a>
+                        
+                        <a href="https://www.instagram.com/microsoft" style="text-decoration: none;" target="_blank">
+                            <img src="https://th.bing.com/th/id/R.a9bb130db07da8a3faa41434465f5ba5?rik=4y3yRkL397fiAg&pid=ImgRaw&r=0"
+                                class="storyphoto img-fluid">
+                            <span class="storytext">Microsoft</span>
+                        </a>
+
+                        <a href="https://www.instagram.com/elonmusk._officialx/" style="text-decoration: none;" target="_blank">
+                            <img src="https://pngimg.com/uploads/elon_musk/elon_musk_PNG20.png"
+                                class="storyphoto img-fluid">
+                            <span class="storytext">Elonrmuskk</span>
+                        </a>
+
+                        <a href="https://www.instagram.com/spacex" style="text-decoration: none;" target="_blank">
+                            <img src="https://logosmarcas.net/wp-content/uploads/2020/09/SpaceX-Emblema.png"
+                                class="storyphoto img-fluid">
+                            <span class="storytext">Spacex</span>
+                        </a>
+
+                        <a href="https://www.instagram.com/github" style="text-decoration: none;" target="_blank">
+                            <img src="https://logos-world.net/wp-content/uploads/2020/11/GitHub-Symbol.png"
+                                class="storyphoto img-fluid">
+                            <span class="storytext mr-2">GitHub</span>
+                        </a>
+
+                        <a href="https://git-scm.com" style="text-decoration: none;" target="_blank">
+                            <img src="https://toppng.com/uploads/preview/git-logo-11609362364wwhuzvtx5h.png"
+                                class="storyphoto img-fluid">
+                            <span class="storytext">Git</span>
+                        </a>
+                        
+                        <a href="https://www.instagram.com/chnsri_" style="text-decoration: none;" target="_blank">
+                            <img src="assets/img/Adsız.png"
+                                class="storyphoto img-fluid">
+                            <span class="storytext">Cihan</span>
+                        </a>
+                        <a href="https://www.instagram.com/sarigrid" style="text-decoration: none;" target="_blank">
+                            <img src="assets/img/logo4.png"
+                                class="storyphoto img-fluid">
+                            <span class="storytext">Sarigrid</span>
+                        </a>
+                    </div>
+                </div>
+            <!-- Card-1 -->
+                <div class="card">
+                    <div class="card-header">
+                        <img src="assets/img/logo4.png"
+                        class="mr-2"
+                        style="width: 35px; height: 35px; border-radius: 50%">
+
+                        <span class="postuserfont">
+                            <strong>
+                                <a href="https://www.instagram.com/sarigrid" 
+                                    target="_blank" 
+                                    style="color: var(--black);">Sarigrid
+                                </a>
+                            </strong>
+                        </span>
+                    </div>
+                    <img src="assets/img/FERRO1.png"
+                    class="card-img-top">
+                    <ul class="list-group list-group-horizontal mt-1" style="list-style-type: none;">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="far fa-heart fa-lg" style="color:var(--black); position: relative; font-size: 23px"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="far fa-comment fa-lg"
+                                style="
+                                color: var(--black);
+                                position: relative;
+                                font-size: 23px;
+                                margin-left: -11px;"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="far fa-paper-plane fa-lg"
+                                style="
+                                color: var(--black);
+                                position: relative;
+                                font-size: 23px;
+                                margin-left: -11px;"></i>
+                            </a>
+                        </li>
+                        <span class="">
+                            <li class="nav-item ml-4">
+                                <a class="nav-link ml-2" href="#">
+                                    <i class="far fa-bookmark fa-lg" style="color:var(--black); position: relative; margin-left: 310px; font-size: 23px"></i>
+                                </a>
+                            </li>
+                        </span>
+                    </ul>
+                    <span>
+                        <img src="assets/img/Adsız.png"
+                        class="mb-1 ml-3"
+                        style="width: 23px; height: 23px; border-radius: 50%">
+                        <span class="postuserfont">
+                            <strong>Cihan</strong> ve
+                            <strong>85 diğer kişi</strong> beğendi
+                        </span>
+                    </span>
+                    <div class="card-body" style="margin-top: -15px">
+                        <p class="card-text postuserfont">
+                            <strong style="margin-left: -4px; margin-right: 5px">hakangüçlü</strong>
+                            🔥🔥🔥
+                        </p>
+                        <a href="#" style="text-decoration: none">
+                            <p class="card-text postuserfont" style=" margin-left: -4px; margin-top: -14px; color: rgb(139, 133, 133);">
+                                15 yorumun tümünü gör
+                            </p>
+                        </a>
+                        <p class="card-text postuserfont">
+                            <strong style="margin-left: -4px; margin-right: 5px">cihan</strong>Et denilince akla gelen ilk yerdir FERRO
+                        </p>
+                        <p class="card-text" style="margin-top: -10px;  margin-left: -4px; font-size: 12px; color: rgb(139, 133, 133);">5 SAAT ÖNCE</p>
+                    </div>
+                    <div class="card-footer" style="
+                        color: var(--rgb);
+                        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI',Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans','Helvetica Neue', sans-serif;
+                        font-size: 14px;">
+                        <span style="margin-left: -4px">Yorum Ekle...</span>
+                        <span class="" style="color:var(--blue); opacity: 50%"><strong>Paylaş</strong></span>
+                    </div>
+                </div>
+            <!-- Card-2 -->
+                <div class="card">
+                    <div class="card-header">
+                        <img src="assets/img/logo4.png"
+                        class="mr-2"
+                        style="width: 35px; height: 35px; border-radius: 50%">
+
+                        <span class="postuserfont">
+                            <strong>
+                                <a href="https://www.instagram.com/sarigrid" 
+                                    target="_blank" 
+                                    style="color: var(--black);">Sarigrid
+                                </a>
+                            </strong>
+                        </span>
+                    </div>
+                    <img src="assets/img/1.png"
+                    class="card-img-top">
+                    <ul class="list-group list-group-horizontal mt-1" style="list-style-type: none;">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="far fa-heart fa-lg" style="color:var(--black); position: relative; font-size: 23px"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="far fa-comment fa-lg"
+                                style="
+                                color: var(--black);
+                                position: relative;
+                                font-size: 23px;
+                                margin-left: -11px;"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="far fa-paper-plane fa-lg"
+                                style="
+                                color: var(--black);
+                                position: relative;
+                                font-size: 23px;
+                                margin-left: -11px;"></i>
+                            </a>
+                        </li>
+                        <span class="">
+                            <li class="nav-item ml-4">
+                                <a class="nav-link ml-2" href="#">
+                                    <i class="far fa-bookmark fa-lg" style="color:var(--black); position: relative; margin-left: 310px; font-size: 23px"></i>
+                                </a>
+                            </li>
+                        </span>
+                    </ul>
+                    <span>
+                        <img src="https://w7.pngwing.com/pngs/509/278/png-transparent-office-man-formal-suit.png"
+                        class="mb-1 ml-3"
+                        style="width: 23px; height: 23px; border-radius: 50%">
+                        <span class="postuserfont">
+                            <strong>hakangüçlü</strong> ve
+                            <strong>98 diğer kişi</strong> beğendi
+                        </span>
+                    </span>
+                    <div class="card-body" style="margin-top: -15px">
+                        <p class="card-text postuserfont">
+                            <strong style="margin-left: -4px; margin-right: 5px">melekdmr</strong>
+                            Ürün kalitesi ve tasarımları gerçekten çok güzel. Personel ilgili ve teslimat süreci de sorunsuzdu, tavsiye ederim.
+                        </p>
+                        <a href="#" style="text-decoration: none">
+                            <p class="card-text postuserfont" style=" margin-left: -4px; margin-top: -14px; color: rgb(139, 133, 133);">
+                                5 yorumun tümünü gör
+                            </p>
+                        </a>
+                        <p class="card-text postuserfont">
+                            <strong style="margin-left: -4px; margin-right: 5px">hakangüçlü</strong>Mağaza çalışanları çok yardımcı oldu, aradığım ürünü kolayca buldum. Kaliteli ve şık mobilyalar var.
+                        </p>
+                        <p class="card-text" style="margin-top: -10px;  margin-left: -4px; font-size: 12px; color: rgb(139, 133, 133);">5 SAAT ÖNCE</p>
+                    </div>
+                    <div class="card-footer" style="
+                        color: var(--rgb);
+                        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI',Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans','Helvetica Neue', sans-serif;
+                        font-size: 14px;">
+                        <span style="margin-left: -4px">Yorum Ekle...</span>
+                        <span class="" style="color:var(--blue); opacity: 50%"><strong>Paylaş</strong></span>
+                    </div>
+                </div>
+            </div>
+            <!-- Aside -->
+             <div class="col-3">
+                <div class="card col-xs-12 rightpanel" id="sticky-sidebar" style="width: 18rem">
+                    <div class="card-body d-flex" >
+                        <div>
+                            <a class="nav-link" href="#">
+                                <span> <img src="assets/img/logo4.png"
+                                    style="width: 60px;
+                                        height: 60px;
+                                        border-radius: 50%;
+                                        border: 2px solid var(--red);
+                                        margin-left: -15px;">
+                                </span>
+                                <samp
+                                    style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI',Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans','Helvetica Neue', sans-serif;
+                                        font-size: 15px;
+                                        color: var(--black);
+                                        margin-left: 20px;">
+                                    <strong>Sarigrid</strong>
+                                </samp>
+                            </a>
+                            <div class="mt-2">
+                                <span class="mt-5" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana,sans-serif;
+                                color: var(--gray);
+                                font-size: 15px;">Senin İçin Öneriler</span>
+                                <span class="postuserfont mt-1" style="font-size: 12px">
+                                    <strong>Tümünü Gör</strong>
+                                </span>
+                            </div>
+                            <div class="mt-2 ml-2">
+                                <div>
+                                    <span>
+                                        <img src="https://pngimg.com/uploads/meta/meta_PNG12.png"
+                                        style="width: 30px; height: 30px; border-radius: 50%">
+                                    </span>
+                                    <a href="https://www.instagram.com/meta/" target="_blank">
+                                        <span class="postuserfont ml-2 mt-1"><strong>meta</strong></span>
+                                        <span class="postuserfont" style="font-size: 13px; color: var(--blue); margin-top: 5px"><strong>Takip Et</strong></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="mt-2 ml-2">
+                                <div>
+                                    <span>
+                                        <img src="https://pngimg.com/uploads/meta/meta_PNG12.png"
+                                        style="width: 30px; height: 30px; border-radius: 50%">
+                                    </span>
+                                    <a href="https://www.instagram.com/googlegemini/" target="_blank">
+                                        <span class="postuserfont ml-2 mt-1"><strong>meta</strong></span>
+                                        <span class="postuserfont" style="font-size: 13px; color: var(--blue); margin-top: 5px"><strong>Takip Et</strong></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="mt-2 ml-2">
+                                <div>
+                                    <span>
+                                        <img src="https://pngimg.com/uploads/meta/meta_PNG12.png"
+                                        style="width: 30px; height: 30px; border-radius: 50%">
+                                    </span>
+                                    <a href="https://www.instagram.com/meta/" target="_blank">
+                                        <span class="postuserfont ml-2 mt-1"><strong>meta</strong></span>
+                                        <span class="postuserfont" style="font-size: 13px; color: var(--blue); margin-top: 5px"><strong>Takip Et</strong></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="mt-2 ml-2">
+                                <div>
+                                    <span>
+                                        <img src="https://pngimg.com/uploads/meta/meta_PNG12.png"
+                                        style="width: 30px; height: 30px; border-radius: 50%">
+                                    </span>
+                                    <a href="https://www.instagram.com/meta/" target="_blank">
+                                        <span class="postuserfont ml-2 mt-1"><strong>meta</strong></span>
+                                        <span class="postuserfont" style="font-size: 13px; color: var(--blue); margin-top: 5px"><strong>Takip Et</strong></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="mt-2 ml-2">
+                                <div>
+                                    <span>
+                                        <img src="https://pngimg.com/uploads/meta/meta_PNG12.png"
+                                        style="width: 30px; height: 30px; border-radius: 50%">
+                                    </span>
+                                    <a href="https://www.instagram.com/meta/" target="_blank">
+                                        <span class="postuserfont ml-2 mt-1"><strong>meta</strong></span>
+                                        <span class="postuserfont" style="font-size: 13px; color: var(--blue); margin-top: 5px"><strong>Takip Et</strong></span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="ml-2 mt-2" style="color: lightgray; font-size: 11px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+                                <span><a href="https://about.instagram.com/" target="_blank" class="rightpanellinks">Hakkında</a> <a href="https://help.instagram.com/" target="_blank" class="rightpanellinks">Yardım</a> <a href="https://about.instagram.com/blog/" class="rightpanellinks">Basın</a> <a href="https://www.instagram.com/developer/" class="rightpanellinks">API</a> <a href="https://www.instagram.com/about/jobs/" class="rightpanellinks">İş Fırsatları</a> <a href="https://www.instagram.com/legal/privacy/" class="rightpanellinks">Gizlilik</a></span>
+                                <span><a href="https://www.instagram.com/legal/terms/" class="rightpanellinks">Koşullar</a> <a href="https://www.instagram.com/explore/locations/" class="rightpanellinks">Konumlar</a> <a href="https://www.instagram.com/directory/profiles/" class="rightpanellinks">Başlıca Hesaplar</a> <a href="https://www.instagram.com/directory/hashtags/" class="rightpanellinks">Konu Etiketleri</a> Dil</span>
+                                <p style="font-size: 12px;">© 2021 INSTAGRAM CLONE</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             </div>
+        </div>
+    </div>
+</body>
+</html> 

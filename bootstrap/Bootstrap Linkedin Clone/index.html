@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedIn Clone</title>
+    
+    <!--Bootstrap -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+     <!-- CSS -->
+      <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+     <nav class="navbar ln-navbar px-3 sticky-top">
+        <div class="container-fluid">
+            <div class="d-flex align-items-center gap-3">
+                <div class="ln-logo">in</div>
+                <input class="form-control ln-search" placeholder="Arama yap">
+            </div>
+            <div class="d-flex ln-menu">
+
+                <div class="ln-item active">
+                    <i class="bi bi-house-fill"></i>
+                    <div>Ana Sayfa</div>
+                </div>
+                <div class="ln-item">
+                    <i class="bi bi-people-fill"></i>
+                    <div>Ağım</div>
+                </div>
+                <div class="ln-item">
+                    <i class="bi bi-briefcase-fill"></i>
+                    <div>İş İlanları</div>
+                </div>
+                <div class="ln-item">
+                    <i class="bi bi-chat-dots-fill"></i>
+                    <div>Mesajlaşma</div>
+                </div>
+                <div class="ln-item position-relative">
+                    <i class="bi bi-bell-fill"></i>
+                    <span class="ln-badge">21</span>
+                    <div>Bildirimler</div>
+                </div>
+                <div class="ln-item">
+                    <img src="assets/img/Adsız.png" class="ln-avatar">
+                    <div>Ben ▾</div>
+                </div>
+                <div class="ln-item">
+                    <i class="bi bi-grid-3x3-gap-fill"></i>
+                    <div>İşletmelere özel</div>
+                </div>
+            </div>
+        </div>
+    </nav>
+<!-- MAIN -->
+     <div class="container mt-4">
+        <div class="row g-3">
+            <!-- LEFT SIDEBAR -->
+             <div class="col-lg-3">
+                <div class="ln-card text-center mb-3">
+                    <div class="cover"></div>
+                    <img src="assets/img/Adsız.png" class="avatar">
+                    <div class="p-3">
+                        <h6 class="mb-0">Cihan Sarı</h6>
+                        <div class="text-soft small">Bilgisayar Programcısı</div>
+                    </div>
+                </div>
+                <div class="ln-card p-3 mb-3">
+                    <div class="d-flex justify-content-between">
+                        <span class="text-soft">Bağlantı</span>
+                        <span>2</span>
+                    </div>
+                    <div class="text-soft small">Ağınızı büyütün</div>
+                </div>
+                <div class="ln-card p-3">
+                    <div class="mb-2">Kaydedilenler</div>
+                    <div class="mb-2">Gruplar</div>
+                    <div class="mb-2">Haber bültenleri</div>
+                    <div>Etkinlikler</div>
+                </div>
+            </div>
+        <!-- CENTER -->
+             <div class="col-lg-6">
+                <div class="ln-card p-3 mb-3">
+                    <div class="d-flex gap-3 align-items-center">
+                        <img src="https://i.pravatar.cc/100" width="48" class="rounded-circle">
+                        <input class="form-control post-input" placeholder="Gönderi oluşturun">
+                    </div>
+                </div>
+                <div class="ln-card p-3 mb-3">
+                    <h6>Sizin için önerilenler</h6>
+                    <div class="d-flex justify-content-between mt-3">
+                        <div class="d-flex gap-2 align-items-center">
+                            <img src="https://i.pravatar.cc/101" width="40" class="rounded-circle">
+                            <div>
+                                <div>Sadi Evren Şeker</div>
+                                <div class="text-soft small">AI Policy Advisor</div>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline-light btn-sm rounded-pill">+ Takip Et</button>
+                    </div>
+                </div>
+                <div class="ln-card p-3">
+                    <div class="d-flex gap-3 mb-2">
+                        <img src="https://i.pravatar.cc/103" width="48" class="rounded-circle">
+                        <div>
+                            <strong>Alibaba Group</strong>
+                            <div class="text-soft small">Tanıtılan içerik</div>
+                        </div>
+                    </div>
+                    <p class="text-soft">
+                        Amap insanların keşfetme ve gezinme şeklini dönüştürüyor.
+                    </p>
+                    <img src="assets/img/1.png"  width="100%"  height="100%" class="img-fluid rounded">
+                </div>
+            </div>
+        <!-- RIGHT -->
+             <div class="col-lg-3">
+
+                <div class="ln-card p-3 mb-3">
+                    <h6>LinkedIn Haberler</h6>
+                    <div class="trend">
+                        <div>Orta Doğu gerilimi artıyor</div>
+                        <div class="text-soft small">45.774 okuyucu</div>
+                    </div>
+                    <div class="trend">
+                        <div>US oil prices surge</div>
+                        <div class="text-soft small">3.087 okuyucu</div>
+                    </div>
+                <!-- RIGHT FOOTER -->
+                     <div class="ln-footer mt-3">
+                        <div>
+                            <a href="#">Hakkımızda</a>
+                            <a href="#">Erişilebilirlik</a>
+                            <a href="#">Yardım Merkezi</a>
+                        </div>
+                        <div>
+                            <a href="#">Gizlilik ve Koşullar ▼</a>
+                            <a href="#">Reklam Tercihleri</a>
+                            <a href="#">Reklam</a>
+                        </div>
+                        <div>
+                            <a href="#">Ticari Hizmetler ▼</a>
+                            <a href="#">LinkedIn uygulamasını yükleyin</a>
+                        </div>
+
+                        <div>
+                            <a href="#">Daha fazla</a>
+                        </div>
+                        <div class="mt-2">
+                            <span class="ln-footer-logo">Linked<span class="text-bg-light text-dark px-1 rounded">in</span></span>
+                            <span> LinkedIn Corporation © 2026</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+</body>
+</html>

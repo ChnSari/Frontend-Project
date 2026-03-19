@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Repo</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+<style>
+:root{
+  --primary:#4facfe;
+  --secondary:#1f2342;
+  --dark:#0b1220;
+  --glass:rgba(255,255,255,.12);
+  --border:rgba(255,255,255,.25);
+}
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:"Inter",sans-serif}
+
+body{
+  height:100vh;
+  background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+}
+
+/* Layout */
+.auth-wrapper{
+  width:900px;
+  height:560px;
+  display:flex;
+  border-radius:28px;
+  overflow:hidden;
+  box-shadow:0 30px 60px rgba(0,0,0,.4);
+}
+
+/* Left */
+.auth-cover{
+  flex:1;
+  background:url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d") center/cover no-repeat;
+  position:relative;
+}
+
+.auth-cover::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,.55);
+}
+
+.auth-cover-content{
+  position:relative;
+  z-index:2;
+  padding:60px;
+}
+
+.auth-cover h1{
+  font-size:42px;
+  font-weight:700;
+}
+
+.auth-cover p{
+  margin-top:16px;
+  opacity:.85;
+  font-size:18px;
+}
+
+/* Right */
+.auth-panel{
+  flex:1;
+  background:var(--glass);
+  backdrop-filter:blur(20px);
+  padding:48px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.logo{
+  font-weight:700;
+  font-size:22px;
+  margin-bottom:20px;
+}
+
+form{
+  display:none;
+  animation:fade .4s ease;
+}
+
+form.active{display:block}
+
+h2{
+  margin-bottom:6px;
+  font-size:26px;
+}
+
+.subtitle{
+  font-size:14px;
+  opacity:.75;
+  margin-bottom:28px;
+}
+
+/* Inputs */
+.input{
+  position:relative;
+  margin-bottom:22px;
+}
+
+.input input{
+  width:100%;
+  padding:14px 16px;
+  background:transparent;
+  border:1px solid var(--border);
+  border-radius:14px;
+  color:#fff;
+  outline:none;
+}
+
+.input label{
+  position:absolute;
+  left:16px;
+  top:50%;
+  transform:translateY(-50%);
+  font-size:14px;
+  color:rgba(255,255,255,.7);
+  transition:.3s;
+  pointer-events:none;
+}
+
+.input input:focus + label,
+.input input:valid + label{
+  top:-8px;
+  font-size:12px;
+  color:var(--primary);
+}
+
+/* Button */
+button{
+  width:100%;
+  padding:14px;
+  border:none;
+  border-radius:16px;
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  color:#fff;
+  font-weight:600;
+  cursor:pointer;
+  transition:.3s;
+}
+
+button:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 20px rgba(0,0,0,.35);
+}
+
+.link{
+  margin-top:16px;
+  font-size:13px;
+  text-align:center;
+}
+
+.link a{
+  color:var(--primary);
+  text-decoration:none;
+  cursor:pointer;
+}
+
+@keyframes fade{
+  from{opacity:0;transform:translateY(10px)}
+  to{opacity:1;transform:none}
+}
+
+/* Responsive */
+@media(max-width:900px){
+  .auth-wrapper{width:95%;height:auto;flex-direction:column}
+  .auth-cover{display:none}
+}
+</style>
+
+
+</head>
+<body>
+
+<div class="auth-wrapper">
+
+  <div class="auth-cover">
+    <div class="auth-cover-content">
+      <h2>Secure Access</h2>
+    </div>
+  </div>
+
+  <div class="auth-panel">
+
+    <!-- LOGIN -->
+    <form id="login" class="active">
+      <h2>Giriş Yap</h2>
+      <p class="subtitle">Hesabına giriş yap</p>
+
+      <div class="input">
+        <input required>
+        <label>Email</label>
+      </div>
+
+      <div class="input">
+        <input type="password" required>
+        <label>Parola</label>
+      </div>
+
+      <button>Giriş Yap</button>
+
+      <div class="link">
+        <a onclick="show('forgot')">Şifremi Unuttum</a> •
+        <a onclick="show('register')">Kayıt Ol</a>
+      </div>
+    </form>
+
+    <!-- REGISTER -->
+    <form id="register">
+      <h2>Kayıt Ol</h2>
+      <p class="subtitle">Yeni hesap oluştur</p>
+
+      <div class="input">
+        <input required>
+        <label>Ad Soyad</label>
+      </div>
+
+      <div class="input">
+        <input required>
+        <label>Email</label>
+      </div>
+
+      <div class="input">
+        <input type="password" required>
+        <label>Parola</label>
+      </div>
+
+      <button>Kayıt Ol</button>
+
+      <div class="link">
+        <a onclick="show('login')">Giriş Yap</a>
+      </div>
+    </form>
+
+    <!-- FORGOT -->
+    <form id="forgot">
+      <h2>Şifre Sıfırla</h2>
+      <p class="subtitle">Mail adresini gir</p>
+
+      <div class="input">
+        <input required>
+        <label>Email</label>
+      </div>
+
+      <button>Kod Gönder</button>
+
+      <div class="link">
+        <a onclick="show('login')">Geri Dön</a>
+      </div>
+    </form>
+
+  </div>
+</div>
+
+<script>
+function show(id){
+  document.querySelectorAll("form").forEach(f=>f.classList.remove("active"));
+  document.getElementById(id).classList.add("active");
+}
+</script>
+
+</body>
+</html>

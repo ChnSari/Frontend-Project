@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+
+
+    <style>
+
+        :root{
+            --bg:#E50914;
+            --rg:white;
+            --hover:#0F0F0F;
+        }
+
+        body{
+            margin: 0;
+            font-family:Poppins;
+            background: var(--hover);
+            color: var(--rg);
+        }
+
+        /* Nav */
+        .nav{
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 0px;
+            position: absolute;
+            width: 100%;
+            z-index: 2;
+        }
+
+        .logo{
+            color: var(--bg);
+            font-size: 34px;
+            font-weight: 600;
+            margin-left: 65px;
+        }
+
+        /* Hero */
+        .hero{
+            height: 90vh;
+            background: linear-gradient(to right,#000 20%,transparent),
+            url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=2070") center/cover;
+            display: flex;
+            align-items: center;
+            padding: 0 60px;
+        }
+
+        .hero h1{
+            font-size: 60px;
+        }
+
+        .hero p{
+            font-size: 20px;
+        }
+
+        .btn{
+            padding: 12px 24px;
+            border: none;
+            margin-right: 10px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+        .watch{
+            background: #E50914;
+            color:white;
+        }
+
+        .list{
+            background:#333;
+            color:white;
+        }
+        
+        .container{
+            padding: 60px;
+        }
+
+        .cards{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap:20px;
+        }
+
+        .card{
+            height: 250px;
+            background:#1A1A1A;
+            border-radius: 10px;
+        }
+
+        .card img{
+            width: 330px;
+            height: 250px;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: 0.04s ease;
+        }
+
+        .card:hover img{
+            transform:scale(1.02);
+            
+        }
+    </style>
+</head>
+<body>
+
+    <div class="nav">
+        <div class="logo">PLAYFLİX</div>
+    </div>
+
+    <section class="hero">
+        <div>
+            <h1>Movie Page</h1>
+            <p>Sci-Fi • 2016 • ⭐ 8.7</p>
+            <p>Gizemli olaylar yaşayan küçük bir kasabada doğaüstü güçlerle mücadele eden çocukların hikayesi.</p>
+        
+            <button class="btn watch">▶ İzle</button>
+            <button class="btn list">+ Liste</button>
+        </div>
+    </section>
+
+    <div class="container">
+        <h2>Benzer İçerikler</h2>
+        <div class="cards">
+
+        <div class="card">
+            <img src="https://img.tamindir.com/2025/12/470608/2025-en-iyi-dizileri.jpg">
+        </div>
+
+        <div class="card">
+            <img src="https://th.bing.com/th/id/R.07ca7e4b98fe44262e4a64f45a6fd0c8?rik=1t44gNHpbWrEMQ&pid=ImgRaw&r=0">
+        </div>
+
+        <div class="card">
+            <img src="https://img.tamindir.com/2025/12/470608/2025-en-iyi-dizileri.jpg">
+        </div>
+
+        <div class="card">
+            <img src="https://th.bing.com/th/id/R.07ca7e4b98fe44262e4a64f45a6fd0c8?rik=1t44gNHpbWrEMQ&pid=ImgRaw&r=0">
+        </div>
+    </div>
+    </div>
+    
+</body>
+</html>
