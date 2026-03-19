@@ -1,6 +1,5 @@
 #  Cihan Sarı – Personal Portfolio
 
-![Portfolio Preview](img/1.png)
 
 > A minimal, paper-inspired personal portfolio with a clean and professional aesthetic.
 
